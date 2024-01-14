@@ -1,0 +1,19 @@
+
+h1{
+    text-align: center;
+}
+
+p{
+    color:black;
+    text-align: center;
+}
+.btn_bar{
+    display:flex; 
+    justify-content: center;
+}
+#count_btn {
+    margin: 10px;
+}
+#reset_btn{
+    margin: 10px;
+}

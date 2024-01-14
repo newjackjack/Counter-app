@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1 style="text-align: center;">Counter</h1>
+    <p style="text-align: center;">{{session['key']}}</p>
+    <div class="btn_bar" style="display:flex; justify-content: center;">
+        <form action='/count' method='post'>
+            <button type="submit" name ='count' id='count_btn'>Click</button>
+        </form>
+        <form action='/count_2' method='post'>
+            <button type="submit" name ='count' id='count_btn'>Click + 2</button>
+        </form>
+        <form action='/count_define' method='post'>
+            <input type="text" name ='count_define'>
+            <button type="submit" name ='count_define' id='count_btn'>Click + your input</button>
+        </form>
+        <form action="/destroy_session" method='post'>
+            <button type='submit' name ='reset' id='reset_btn'>Reset</button>
+        </form>
+    </div>
+    <p id="num_visit">Number of Visit this Website: {{session["num_of_visit"]}}</p>
+    <p id="num_counter_used">Number of Counter being used: {{session["num_counter_used"]}}</p>
+</body>
+</html>
